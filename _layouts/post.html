@@ -12,6 +12,12 @@ layout: default
   {{ content }}
   </article>
 
+  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+  </fb:login-button>
+
+  <div id="status">
+  </div>
+
   <div class="fb-comments" data-href="http://example.com{{ page.url }}" data-numposts="10" data-colorscheme="light"></div>
 
 </div>
