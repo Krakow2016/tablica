@@ -1,6 +1,8 @@
-var job_id = window.location.pathname
-var startkey = escape(JSON.stringify([job_id])),
-    endkey = escape(JSON.stringify([job_id, {}]))
+var BACKEND = $('#backend').val()
+var JOB_ID = $('#page_url').val()
+
+var startkey = escape(JSON.stringify([JOB_ID])),
+    endkey = escape(JSON.stringify([JOB_ID, {}]))
 
 $.getJSON('https://krakow2016.cloudant.com/jobs/_design/applications/_view/all?startkey='+startkey+'&endkey='+endkey+'&include_docs=true&callback=?', function(applications) {
 
@@ -31,7 +33,7 @@ $.getJSON('https://krakow2016.cloudant.com/jobs/_design/applications/_view/all?s
 
     $.ajax({ // Ask server whether we are authenticated
         type: "GET",
-        url: "http://localhost:3000/me",
+        url: BACKEND+"/me",
         cache: false,
         crossDomain: true,
         xhrFields: { withCredentials: true  }, // sends our cookie
@@ -39,7 +41,7 @@ $.getJSON('https://krakow2016.cloudant.com/jobs/_design/applications/_view/all?s
             if(user.ok) { // We are logged in
 
                 var button,
-                    checksum = md5([user.result._id, job_id])
+                    checksum = md5([user.result._id, JOB_ID])
 
                 var application = _.find(applications.rows, function(x){ return x.id === checksum })
                 if(application) { // We already have applied
@@ -108,11 +110,11 @@ var Buttons = {
 
             $.ajax({
                 type: "POST",
-                url: "http://localhost:3000/jobs",
+                url: BACKEND+"/jobs",
                 cache: false,
                 crossDomain: true,
                 contentType: "application/json",
-                data: JSON.stringify({ url: job_id, username: this.username }),
+                data: JSON.stringify({ url: JOB_ID, username: this.username }),
                 dataType: 'json',
                 xhrFields: { withCredentials: true },
                 success: function(data) {
@@ -129,7 +131,7 @@ var Buttons = {
     Login: Button.extend({
         name: "Zaloguj się",
         click: function() {
-            window.location = "http://localhost:3000/auth/facebook/"
+            window.location = BACKEND+"/auth/facebook/"
         }
     })
 }
