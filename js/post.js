@@ -10,6 +10,25 @@ $.getJSON('https://krakow2016.cloudant.com/jobs/_design/applications/_view/all?s
     var available = $('#team_count').val() - applications.rows.length
     console.log('Wolnych miejsc: ', available)
 
+    // Displaying submitted application
+    var List = Backbone.View.extend({
+        el: '#list',
+        initialize: function() {
+            this.render()
+        },
+        render: function() {
+            var that = this
+            this.collection.forEach(function(row) {
+                that.addOne(row)
+            })
+        },
+        addOne: function(row) {
+            this.$el.append('<li>'+ row.doc.username +'</li>')
+        }
+    })
+
+    var list = new List({ collection: applications.rows })
+
     $.ajax({ // Ask server whether we are authenticated
         type: "GET",
         url: "http://localhost:3000/me",
@@ -29,7 +48,10 @@ $.getJSON('https://krakow2016.cloudant.com/jobs/_design/applications/_view/all?s
                 } else { // Show "apply for a job" button
                     if(available > 0) {
                         console.log('Apply!')
-                        button = new Buttons.Apply({username: user.result.profile.displayName})
+                        button = new Buttons.Apply({
+                            username: user.result.profile.displayName,
+                            list: list
+                        })
                     } else { // There is no more applications to apply for
                         console.log('Application closed')
                         button = new Buttons.Closed()
@@ -42,18 +64,18 @@ $.getJSON('https://krakow2016.cloudant.com/jobs/_design/applications/_view/all?s
                 console.log('Application closed')
                 button = new Buttons.Closed()
             }
-            $('.post').append(button.render().el)
+            $('#list').before(button.render().el)
         }
     })
 })
 
 var Button = Backbone.View.extend({
-    tagName: 'button',
+    tagName: 'p',
     className: 'action',
     initialize: function() {
     },
     render: function() {
-        this.$el.text(this.name)
+        this.$el.html('<button>'+this.name+'</button>')
         return this
     },
     events: {
@@ -76,11 +98,14 @@ var Buttons = {
     }),
     Apply: Button.extend({
         initialize: function(options) {
+            this.list = options.list
             this.username = options.username
         },
         name: "Zgłoś się!",
         click: function() {
-            var $el = this.$el
+            var $el = this.$el,
+                that = this
+
             $.ajax({
                 type: "POST",
                 url: "http://localhost:3000/jobs",
@@ -91,16 +116,15 @@ var Buttons = {
                 dataType: 'json',
                 xhrFields: { withCredentials: true },
                 success: function(data) {
-                    $el.replaceWith(new Buttons.Cancel().render().el)
+                    var opts = { application: data.doc }
+                    $el.replaceWith(new Buttons.Cancel(opts).render().el)
+                    that.list.addOne({doc: {username: that.username }})
                 }
             })
         }
     }),
     Closed: Button.extend({
         name: "Wszystkie miejsca zajęte",
-        initialize: function() {
-            this.$el.attr('disabled', 'disabled')
-        }
     }),
     Login: Button.extend({
         name: "Zaloguj się",

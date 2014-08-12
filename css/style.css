@@ -2,6 +2,10 @@
   text-align: center
 }
 
-button.action {
+.action {
+  text-align: center
+}
+
+.action button {
   padding: 20px
 }
