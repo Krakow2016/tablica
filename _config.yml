@@ -1,12 +1,12 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+title: Bank Pracy - Wolontariusze ŚDM
+facebook: "facebook.com/swiatowydzienmlodziezy"
+description: "Jeżeli chcesz się zaangażować w organizację ŚDM - zgłoś chęć wykonania konkretnego zadania!"
 baseurl: "/jobs"
 url: "https://krakow2016.github.io"
 backend: "http://infinite-everglades-3721.herokuapp.com"
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: "sdm_pl"
+github_username: "Krakow2016"
 
 # Build settings
 markdown: kramdown
