@@ -7,4 +7,4 @@ tags: archive
 team_count: 2
 ---
 
-Ten post powinien znaleźć się w archiwum {{ page.tags }}... opis pracy
+Test: opis opracy: ilość osób, czas realizajci i format kontaktu
