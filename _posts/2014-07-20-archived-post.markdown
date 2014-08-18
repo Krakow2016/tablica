@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Zmieniony tytuł"
+title:  "Testy"
 date:   2014-07-20 15:36:59
 tags: archive
 
