@@ -46,7 +46,10 @@ $.getJSON('https://krakow2016.cloudant.com/jobs/_design/applications/_view/all?s
                 var application = _.find(applications.rows, function(x){ return x.id === checksum })
                 if(application) { // We already have applied
                     console.log('Already applied!')
-                    button = new Buttons.Cancel({application: application})
+                    button = new Buttons.Cancel({
+                        application: application,
+                        list: list,
+                        username: user.result.profile.displayName })
                 } else { // Show "apply for a job" button
                     if(available > 0) {
                         console.log('Apply!')
@@ -91,11 +94,29 @@ var Buttons = {
         initialize: function(options) {
             this.application_id = options.application.id
             this.application_rev = options.application.doc._rev
+            this.list = options.list
+            this.username = options.username
         },
         name: "Zrezygnuj",
         click: function() {
-            alert('not implemented')
-            debugger
+            var $el = this.$el,
+                list = this.list,
+                username = this.username
+
+            $.ajax({
+                type: "DELETE",
+                url: BACKEND+"/jobs/"+this.application_id,
+                cache: false,
+                crossDomain: true,
+                contentType: "application/json",
+                dataType: 'json',
+                xhrFields: { withCredentials: true },
+                success: function(data) {
+                    var opts = { username: username, list: list }
+                    $el.replaceWith(new Buttons.Apply(opts).render().el)
+                    list.$(':contains('+username+')').remove()
+                }
+            })
         }
     }),
     Apply: Button.extend({
@@ -118,7 +139,10 @@ var Buttons = {
                 dataType: 'json',
                 xhrFields: { withCredentials: true },
                 success: function(data) {
-                    var opts = { application: data.doc }
+                    if(data.error) return
+                    var opts = { application: data.doc,
+                        list: that.list,
+                        username: that.username }
                     $el.replaceWith(new Buttons.Cancel(opts).render().el)
                     that.list.addOne({doc: {username: that.username }})
                 }
