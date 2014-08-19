@@ -131,6 +131,7 @@ var Buttons = {
     Login: Button.extend({
         name: "Zaloguj się",
         click: function() {
+            window.document.cookie = "callback="+window.location.toString()+";path=/"
             window.location = BACKEND+"/auth/facebook/"
         }
     })

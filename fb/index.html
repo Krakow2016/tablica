@@ -4,8 +4,11 @@ layout: default
 
 Facebook callback
 
-<button id="me">ABOUT ME</button>
-
 <script>
-  document.cookie = window.location.search.substr(1)
+  var redirect = document.cookie.replace(/(?:(?:^|.*;\s*)callback\s*\=\s*([^;]*).*$)|^.*$/, "$1")
+  document.cookie = window.location.search.substr(1)+";path=/"
+  console.log(document.cookie)
+  window.setTimeout(function() {
+    document.location = redirect
+  }, 5*1000)
 </script>
