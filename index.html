@@ -4,21 +4,21 @@ layout: default
 
 <div class="home">
 
-  <h1>Aktualne ogłoszenia:</h1>
+  {% for category in site.categories %}
+    <a href="#{{ category | first | prepend: site.baseurl }} ">{{ category | first }}</a>
 
-  <ul class="posts">
-    {% for post in site.posts %}
-      {% assign tag = post.tags | last %}
-      {% unless tag == 'archive' %}
-        <li>
-          <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </li>
-      {% endunless %}
+    <ul class="posts">
+    {% for posts in category %}
+      {% for post in posts %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
     {% endfor %}
-  </ul>
+    </ul>
+  {% endfor %}
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-  <h2 class="center"><a href="{{ "/archives" | prepend: site.baseurl }} ">Archiwum</a></h2>
 
 </div>
