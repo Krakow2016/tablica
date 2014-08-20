@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Tytuł ogłoszenia"
+date:   2014-08-13 18:30:00
+categories:
+- nowa ze spacja
+
+team_count: 2
+---
+
+Spis *wszystkich* sekcji które **powinno** zawierać ogłoszenie.
+
+Nasz komentarz
+---
+
