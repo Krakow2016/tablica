@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Tytuł ogłoszenia"
+title:  "Nowe zadanie"
 date:   2014-08-13 18:30:00
 categories:
 - nowa ze spacja
