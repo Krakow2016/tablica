@@ -3,7 +3,7 @@ layout: post
 title:  "Cwiczenia Jacka"
 date:   2014-08-21 18:30:00
 categories:
-- PRACE DLA OSÓB Z KRAKOWA I OKOLIC
+- **PRACE DLA OSÓB Z KRAKOWA I OKOLIC**
 ---
 
 team_count: 2
