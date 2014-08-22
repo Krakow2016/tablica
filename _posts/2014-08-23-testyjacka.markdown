@@ -9,7 +9,7 @@ categories:
 team_count: 2
 ---
 
-Skanownaie zdjęc w biurze ŚDM na ul. Kanoniczej 18 ** dwie gwiazdki to pogrubienei tekstu**
+Skanownaie zdjęc w biurze ŚDM na ul. Kanoniczej 18 **dwie gwiazdki to pogrubienie tekstu**
 
 Trzy pauzy to powiększony tekst
 ---
