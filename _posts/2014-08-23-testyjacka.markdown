@@ -6,7 +6,7 @@ categories:
 - PRACE DLA OSÓB Z KRAKOWA I OKOLIC
 ---
 
-team_count: 2
+team_count: 4
 ---
 
 Skanownaie zdjęc w biurze ŚDM na ul. Kanoniczej 18 **dwie gwiazdki to pogrubienie tekstu**
