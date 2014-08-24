@@ -9,3 +9,7 @@
 .action button {
   padding: 20px
 }
+
+#no_category:not(.hidden) ~ #from_category, #no_category:not(.hidden) ~ #category_name {
+  display: none
+}

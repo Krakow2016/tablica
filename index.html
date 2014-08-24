@@ -2,23 +2,57 @@
 layout: default
 ---
 
-<div class="home">
+<div class="content">
+  Przeglądasz <span id="no_category">wszystkie</span> ogłoszenia <span id="from_category">z kategorii</span> <span id="category_name"></span>
+  <span class="dropdown">
+    <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+      Zmień
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i>Wszystko</i></a></li>
+      <li class="divider"></li>
+      {% for category in site.categories %}
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#{{ category | first | uri_escape }}">{{ category | first }}</a></li>
+      {% endfor %}
+    </ul>
+  </span>
+</div>
 
-  {% for category in site.categories %}
-    <a href="#{{ category | first | prepend: site.baseurl }} ">{{ category | first }}</a>
+{% for category in site.categories %}
+  <div class="category" data-category="#{{ category | first | uri_escape }}">
+    <!--<a href="#{{ category | first | prepend: site.baseurl }} ">{{ category | first }}</a>-->
 
     <ul class="posts">
     {% for posts in category %}
       {% for post in posts %}
+      {% if post.url %}
       <li>
         <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </li>
+      {% endif %}
       {% endfor %}
     {% endfor %}
     </ul>
-  {% endfor %}
+  </div>
+{% endfor %}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-</div>
+<script>
+  var hashchange = function(e) {
+    var hash = window.location.hash
+    if(hash === "") {
+      $('#no_category').removeClass('hidden')
+      $('.category').show()
+    } else {
+      $('#no_category').addClass('hidden')
+      $('.category').hide()
+      $('.category[data-category="'+hash+'"]').show()
+      $('#category_name').text(decodeURI(hash.substr(1)))
+    }
+  }
+  window.onhashchange = hashchange
+  hashchange()
+</script>
