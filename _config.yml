@@ -10,4 +10,4 @@ github_username: "Krakow2016"
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+permalink: "/:title.html"

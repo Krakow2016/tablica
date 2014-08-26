@@ -4,7 +4,6 @@ title:  "Nowe zadanie"
 date:   2014-08-13 18:30:00
 categories:
 - PRACE DLA OSÓB Z KRAKOWA I OKOLIC
----
 
 team_count: 2
 ---

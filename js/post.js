@@ -25,11 +25,13 @@ $.getJSON('https://krakow2016.cloudant.com/jobs/_design/applications/_view/all?s
             })
         },
         addOne: function(row) {
-            this.$el.append('<li>'+ row.doc.username +'</li>')
+            var avatar = new Avatar({model: row}).render().el
+            this.$el.append(avatar)
         }
     })
 
-    var list = new List({ collection: applications.rows })
+    var collection = new Backbone.Collection(applications.rows)
+    new List({ collection: collection})
 
     $.ajax({ // Ask server whether we are authenticated
         type: "GET",
@@ -43,89 +45,114 @@ $.getJSON('https://krakow2016.cloudant.com/jobs/_design/applications/_view/all?s
                 var button,
                     checksum = md5([user.result._id, JOB_ID])
 
-                var application = _.find(applications.rows, function(x){ return x.id === checksum })
+                var application = collection.find(function(x){ return x.id === checksum })
                 if(application) { // We already have applied
                     console.log('Already applied!')
-                    button = new Buttons.Cancel({
-                        application: application,
-                        list: list,
-                        username: user.result.profile.displayName })
+                    application.trigger('me')
                 } else { // Show "apply for a job" button
                     if(available > 0) {
                         console.log('Apply!')
-                        button = new Buttons.Apply({
+                        var button = new Status.Apply({model: new Backbone.Model({doc: {
                             username: user.result.profile.displayName,
-                            list: list
-                        })
+                            user_id: user.result._id
+                        }})})
+                        $('#list').append(button.render().el)
+                        $('#apply-alert').removeClass('hidden')
                     } else { // There is no more applications to apply for
                         console.log('Application closed')
-                        button = new Buttons.Closed()
+                        $('#closed-alert').removeClass('hidden')
                     }
                 }
             } else if(available > 0) { // Show login button
                 console.log('Log in')
-                button = new Buttons.Login()
+                $('.post-header .alert').removeClass('hidden')
             } else { // There is no more applications to apply for
                 console.log('Application closed')
-                button = new Buttons.Closed()
+                $('#closed-alert').removeClass('hidden')
             }
-            $('#list').before(button.render().el)
         }
     })
 })
 
-var Button = Backbone.View.extend({
-    tagName: 'p',
-    className: 'action',
+var Avatar = Backbone.View.extend({
+    tagName: 'li',
     initialize: function() {
+        var doc = this.model.get('doc')
+        this.user_id = doc.user_id
+        this.username = doc.username
+
+        this.listenTo(this.model, 'me', function() {
+            this.$('.flipper').append('<div class="back"><span class="glyphicon glyphicon-remove-circle"></span></div>')
+            this.$el.addClass('activeMe')
+        })
     },
     render: function() {
-        this.$el.html('<button>'+this.name+'</button>')
+        var match = this.user_id.match(':(.+)$')
+          , fb_id = match ? match[1] : this.user_id
+        var src = 'http://graph.facebook.com/'+ fb_id +'/picture?width=100&height=100'
+        if(!this.user_id) debugger
+
+        this.$el.html( $('<div class="flipper" data-toggle="tooltip" title="'+ this.title() +'"><div class="front"><img src="'+ src +'" class="user_avatar"></div></div>') )
+        this.$('.flipper').tooltip({ placement: 'bottom' })
         return this
     },
-    events: {
-        'click': 'click'
+    title: function() {
+        return this.username
     },
-    click: function() {}
-})
+    events: {
+        "click": "click"
+    },
+    click: function() {
+        if(this.$el.hasClass('activeMe')) {
 
-var Buttons = {
-    Cancel: Button.extend({
-        initialize: function(options) {
-            this.application_id = options.application.id
-            this.application_rev = options.application.doc._rev
-            this.list = options.list
-            this.username = options.username
-        },
-        name: "Zrezygnuj",
-        click: function() {
-            var $el = this.$el,
-                list = this.list,
-                username = this.username
+            this.$el.addClass('loading')
+            this.$('.glyphicon').removeClass('glyphicon-remove-circle').addClass('glyphicon-refresh')
+
+            var that = this
+              , application_id = md5([this.user_id, JOB_ID])
 
             $.ajax({
                 type: "DELETE",
-                url: BACKEND+"/jobs/"+this.application_id,
+                url: BACKEND+"/jobs/"+application_id,
                 cache: false,
                 crossDomain: true,
                 contentType: "application/json",
                 dataType: 'json',
                 xhrFields: { withCredentials: true },
                 success: function(data) {
-                    var opts = { username: username, list: list }
-                    $el.replaceWith(new Buttons.Apply(opts).render().el)
-                    list.$(':contains('+username+')').remove()
+                    if(data.error) return
+                    var opts = { model: new Backbone.Model({doc: {
+                        username: that.username,
+                        user_id: that.user_id
+                    }})}
+                    that.$el.replaceWith(new Status.Apply(opts).render().el)
+                    $('#apply-alert').removeClass('hidden')
+                    $('#applied-alert').addClass('hidden')
                 }
             })
         }
-    }),
-    Apply: Button.extend({
-        initialize: function(options) {
-            this.list = options.list
-            this.username = options.username
+    }
+})
+
+var Status = {
+    Apply: Avatar.extend({
+        className: 'me',
+        render: function() {
+            Avatar.prototype.render.call(this)
+            this.$('.flipper').append('<div class="back"><span class="glyphicon glyphicon-ok-circle"></span></div>')
+            return this
         },
-        name: "Zgłoś się!",
+        title: function() {
+            return "Kliknij żeby się zgłosić do zadania!"
+        },
+        events: {
+            "click": "click"
+        },
         click: function() {
+
+            this.$el.addClass('loading')
+            this.$('.glyphicon').removeClass('glyphicon-ok-circle').addClass('glyphicon-refresh')
+
             var $el = this.$el,
                 that = this
 
@@ -135,28 +162,23 @@ var Buttons = {
                 cache: false,
                 crossDomain: true,
                 contentType: "application/json",
-                data: JSON.stringify({ url: JOB_ID, username: this.username }),
+                data: JSON.stringify({ url: JOB_ID, username: this.model.get('doc').username }),
                 dataType: 'json',
                 xhrFields: { withCredentials: true },
                 success: function(data) {
                     if(data.error) return
-                    var opts = { application: data.doc,
-                        list: that.list,
-                        username: that.username }
-                    $el.replaceWith(new Buttons.Cancel(opts).render().el)
-                    that.list.addOne({doc: {username: that.username }})
+                    $el.replaceWith(new Avatar({model: that.model}).render().el)
+                    that.model.trigger('me')
+                    $('#apply-alert').addClass('hidden')
+                    $('#applied-alert').removeClass('hidden')
                 }
             })
         }
-    }),
-    Closed: Button.extend({
-        name: "Wszystkie miejsca zajęte",
-    }),
-    Login: Button.extend({
-        name: "Zaloguj się",
-        click: function() {
-            window.document.cookie = "callback="+window.location.toString()+";path=/"
-            window.location = BACKEND+"/auth/facebook/"
-        }
     })
 }
+
+$('.apply-btn').click(function() {
+    $('.me').click()
+})
+
+window.document.cookie = "callback="+window.location.toString()+";path=/"

@@ -3,22 +3,39 @@ layout: default
 ---
 <div class="post">
 
+  <div id="applied-alert" class="alert alert-success text-center hidden" role="alert">
+    Dziękujemy za zgłoszenie &#128522;
+  </div>
+
   <header class="post-header">
-    <h1>{{ page.title }}</h1>
-    <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <h1>
+      {{ page.title }}
+      <small class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</small>
+    </h1>
+    <div class="container">
+      <ul id="list"></ul>
+      <div class="login-alert alert alert-warning text-center hidden" role="alert">
+        <a href="{{ site.backend }}/auth/facebook/" class="alert-link">Zaloguj się przez Facebook</a> żeby się zgłosić!
+      </div>
+      <span class="glyphicon glyphicon-refresh loading-spinner"></span>
+    </div>
   </header>
 
   <article class="post-content">
   {{ content }}
   </article>
 
+  <div id="apply-alert" class="alert alert-info text-center hidden" role="alert">
+    Dasz radę? <button type="button" class="btn btn-link apply-btn"><strong>Złoś się!</strong></button>
+  </div>
+
+  <div id="closed-alert" class="alert alert-warning text-center hidden" role="alert">Brak możliwości zgłoszenia, wszystkie miejsca zajęte. Dziękujemy!</div>
+
   <input id="team_count" type="hidden" value="{{ page.team_count }}" />
   <input id="backend" type="hidden" value="{{ site.backend }}" />
   <input id="page_url" type="hidden" value="{{ page.url }}" />
 
   <!--<div class="fb-comments" data-href="http://example.com{{ page.url }}" data-numposts="10" data-colorscheme="light"></div>-->
-
-  <ul id="list"></ul>
 
 </div>
 
