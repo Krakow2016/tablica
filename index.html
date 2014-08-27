@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="content">
-  Przeglądasz <span id="no_category">wszystkie</span> ogłoszenia <span id="from_category">z kategorii</span> <span id="category_name"></span>
+  Przeglądasz <span id="no_category">wszystkie</span> ogłoszenia <span id="from_category">z kategorii</span> <strong id="category_name"></strong>
   <span class="dropdown">
     <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
       Zmień
@@ -23,22 +23,33 @@ layout: default
   <div class="category" data-category="#{{ category | first | uri_escape }}">
     <!--<a href="#{{ category | first | prepend: site.baseurl }} ">{{ category | first }}</a>-->
 
-    <ul class="posts">
     {% for posts in category %}
+      {% assign category_name = category | first %}
       {% for post in posts %}
       {% if post.url %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
+      <div class="row">
+        <div class="col-sm-4 text-right category-name">
+          {% if category_name %}
+            <em><small>{{ category_name }}</small></em>
+            {% assign category_name = false %}
+          {% endif %}
+      </div>
+      <div class="col-sm-8">
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+          <h3>
+            {{ post.title }}
+          </h3>
+        </a>
+        <small><span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span></small>
+      </div>
+      </div>
       {% endif %}
       {% endfor %}
     {% endfor %}
-    </ul>
   </div>
 {% endfor %}
 
-<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<p class="rss-subscribe">Subskrybuj <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 <script>
   var hashchange = function(e) {
