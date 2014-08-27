@@ -53,7 +53,7 @@ layout: default
 
 <script>
   var hashchange = function(e) {
-    var hash = window.location.hash
+    var hash = encodeURI(decodeURI(window.location.hash))
     if(hash === "") {
       $('#no_category').removeClass('hidden')
       $('.category').show()
