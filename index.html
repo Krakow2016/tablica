@@ -63,7 +63,14 @@ layout: default
       $('.category[data-category="'+hash+'"]').show()
       $('#category_name').text(decodeURI(hash.substr(1)))
     }
+    document.cookie = 'hash='+hash // Remember last viewd category
   }
   window.onhashchange = hashchange
-  hashchange()
+
+  if(!window.location.hash) { // Read last category from cookie
+    var redirect = document.cookie.replace(/(?:(?:^|.*;\s*)hash\s*\=\s*([^;]*).*$)|^.*$/, "$1")
+    window.location.hash = redirect
+  } else {
+    hashchange()
+  }
 </script>
