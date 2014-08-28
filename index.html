@@ -26,7 +26,7 @@ layout: default
     {% for posts in category %}
       {% assign category_name = category | first %}
       {% for post in posts %}
-      {% if post.url %}
+      {% if post.url and post.archive != true %}
       <div class="row">
         <div class="col-sm-4 text-right category-name">
           {% if category_name %}

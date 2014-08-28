@@ -21,8 +21,7 @@ zostać zaakceptowane lub odrzucone przez członka zespołu.
 ### Tryb online
 
 Najprostszy sposób na dodanie nowego lub edycję istniejącego ogłoszenia jest
-poprzez stronę internetową
-<https://github.com/Krakow2016/jobs/tree/gh-pages/\_posts>.
+poprzez stronę internetową <https://github.com/Krakow2016/jobs/tree/gh-pages/_posts>.
 
 **Edycja:** Wybierz z listy dowolny plik z rozszerzeniem `.markdown`, a
 następnie kliknij ikonkę ołówka nad prawym górnym rogiem podgądu pliku. Teraz
@@ -30,7 +29,7 @@ możesz edytować treść pliku. Aby zapisać wykonaną pracę, kliknij przycisk
 `Commit changes`
 
 **Dodawanie:** Znajdź symbol `+` w górnej części strony, zaraz za ścieżką
-katalogów w której się znajdujemy ('jobs/\_posts/') i kliknij go. Teraz możesz
+katalogów w której się znajdujemy (`jobs/_posts/`) i kliknij go. Teraz możesz
 napisać treść ogłoszenia. Aby zapisać wykonaną pracę, kliknij przycisk `Commit
 new file`. Pamiętaj, że każde ogłoszenie musi zawierać na początku sekcję
 metadanych! Czytaj dalej żeby dowiedzieć się więcej.
@@ -59,16 +58,25 @@ Każde ogłoszenie musi zawrzeć na początku sekcję metadanych (nawet jeżeli 
 być pusta), która zaczyna się i kończy ciągiem 3 minusów w osobnej linii
 (`---`).
 
-Dane jakie powinny znaleźć się w tej sekcji to: * `layout` - powinien mieć
-zawsze wartość `post`, * `title` - tytuł ogłoszenia, * `date` - data dodania, *
-`category` lub `categories` - kategoria lub kategorie oddzielone spacją, \*
-`team_count` - liczba osób potrzebna do wykonania zadania.
+Dane jakie powinny znaleźć się w tej sekcji to:
+* `layout` - powinien mieć zawsze wartość `post`,
+* `title` - tytuł ogłoszenia,
+* `date` - data dodania,
+* `category` lub `categories` - kategoria lub kategorie oddzielone spacją,
+* `team_count` - liczba osób potrzebna do wykonania zadania,
+* `archive` (opcjonalnie) - jeżeli `true`, nie będzie wyświetlane na liście wszystkich ogłoszeń.
 
 Format danych w tej sekcji to: jedna para (klucz i wartość) w jednej linijce
 oddzielone dwukropkiem, np.: `layout: post`. W przypadku kategorii możliwe jest
-rozbicie listy na wiele linijek w następujący sposób: \`\`` categories: -
-pierwsza kategoria - druga kategoria `\`\` W ten sposób możemy definiować
-kategorie ze spacją w nazwie.
+rozbicie listy na wiele linijek w następujący sposób:
+
+```
+categories:
+- pierwsza kategoria
+- druga kategoria
+```
+
+W ten sposób możemy definiować kategorie ze spacją w nazwie.
 
 Formatowanie
 ------------
