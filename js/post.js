@@ -93,7 +93,7 @@ var Avatar = Backbone.View.extend({
         if(!this.user_id) debugger
 
         this.$el.html( $('<div class="flipper" data-toggle="tooltip" title="'+ this.title() +'"><div class="front"><img src="'+ src +'" class="user_avatar"></div></div>') )
-        this.$('.flipper').tooltip({ placement: 'bottom' })
+        this.$('.flipper').tooltip({ placement: 'bottom', container: 'body' })
         return this
     },
     title: function() {
