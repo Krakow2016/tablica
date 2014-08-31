@@ -26,6 +26,10 @@
   }
 }
 
+.navbar {
+  border-radius: 0px;
+}
+
 .container {
   width: auto;
   max-width: 680px;
@@ -162,12 +166,12 @@ li.activeMe:hover .flipper, li.me:hover .flipper {
   width: 100%;
 }
 
-#list:empty + .login-alert {
+#list:empty ~ .alert {
   margin: 20px 0;
   line-height: 68px
 }
 
-#list:not(:empty) ~ .loading-spinner, .login-alert:not(.hidden) ~ .loading-spinner {
+#list:not(:empty) ~ .loading-spinner, .login-alert:not(.hidden) ~ .loading-spinner, .error-alert:not(.hidden) ~ .loading-spinner {
   display: none
 }
 
@@ -209,4 +213,12 @@ footer .container {
 .category-name {
   margin-top: 20px;
   color: #ccc
+}
+
+.row + .empty-alert {
+  display: none
+}
+
+.category:not(.hidden) + .category .empty-alert {
+  display: none
 }

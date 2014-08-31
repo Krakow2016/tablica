@@ -65,11 +65,14 @@ $.getJSON('https://krakow2016.cloudant.com/jobs/_design/applications/_view/all?s
                 }
             } else if(available > 0) { // Show login button
                 console.log('Log in')
-                $('.post-header .alert').removeClass('hidden')
+                $('.login-alert').removeClass('hidden')
             } else { // There is no more applications to apply for
                 console.log('Application closed')
                 $('#closed-alert').removeClass('hidden')
             }
+        },
+        error: function() {
+            $('.error-alert').removeClass('hidden')
         }
     })
 })

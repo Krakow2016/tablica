@@ -1,12 +1,10 @@
 var hashchange = function(e) {
     var hash = encodeURI(decodeURI(window.location.hash))
     if(hash === "") {
-        $('#no_category').removeClass('hidden')
-        $('.category').show()
+        $('#no_category, .category').removeClass('hidden')
     } else {
-        $('#no_category').addClass('hidden')
-        $('.category').hide()
-        $('.category[data-category="'+hash+'"]').show()
+        $('#no_category, .category').addClass('hidden')
+        $('.category[data-category="'+hash+'"]').removeClass('hidden')
         $('#category_name').text(decodeURI(hash.substr(1)))
     }
     document.cookie = 'hash='+hash // Remember last viewd category

@@ -3,6 +3,7 @@ layout: default
 javascript: js/index.js
 ---
 
+{% assign categories = site.categories | sort %}
 <div class="content">
   Przeglądasz <span id="no_category">wszystkie</span> ogłoszenia <span id="from_category">z kategorii</span> <strong id="category_name"></strong>
   <span class="dropdown">
@@ -13,19 +14,19 @@ javascript: js/index.js
     <ul class="dropdown-menu" role="menu">
       <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i>Wszystko</i></a></li>
       <li class="divider"></li>
-      {% for category in site.categories %}
+      {% for category in categories %}
       <li role="presentation"><a role="menuitem" tabindex="-1" href="#{{ category | first | uri_escape }}">{{ category | first }}</a></li>
       {% endfor %}
     </ul>
   </span>
 </div>
 
-{% for category in site.categories %}
+<div class="category"></div>
+{% for category in categories %}
   <div class="category" data-category="#{{ category | first | uri_escape }}">
-    <!--<a href="#{{ category | first | prepend: site.baseurl }} ">{{ category | first }}</a>-->
 
+    {% assign category_name = category | first %}
     {% for posts in category %}
-      {% assign category_name = category | first %}
       {% for post in posts %}
       {% if post.url and post.archive != true %}
       <div class="row">
@@ -47,6 +48,10 @@ javascript: js/index.js
       {% endif %}
       {% endfor %}
     {% endfor %}
+
+    <div class="alert alert-warning empty-alert text-center" role="alert">
+      Brak aktualnych ogłoszeń w tej kategorii. <a href="#">Zobacz wszystkie ogłoszenia.</a>
+    </div>
   </div>
 {% endfor %}
 
