@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: page
+title: Kontakt
 ---
 
 Informacje o kontakcie.

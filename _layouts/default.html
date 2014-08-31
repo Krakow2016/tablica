@@ -19,5 +19,17 @@
       </div>
     </footer>
 
+    <script src="{{ "/js/lib/jquery-2.1.1.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/lib/md5.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/lib/underscore-min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/lib/backbone-min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/lib/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+
+    {% if page.javascript %}
+    <script>
+      {% include {{page.javascript}} %}
+    </script>
+    {% endif %}
+
     </body>
 </html>
