@@ -18,10 +18,18 @@ jedynie sugerować zmiany za pomocą mechanizmu [Pull
 Request](<https://help.github.com/articles/using-pull-requests>), które mogą
 zostać zaakceptowane lub odrzucone przez członka zespołu.
 
-### Tryb online
+### Tryb online (Prose.io)
 
-Najprostszy sposób na dodanie nowego lub edycję istniejącego ogłoszenia jest
-poprzez stronę internetową <https://github.com/Krakow2016/jobs/tree/gh-pages/_posts>.
+Zalecanym sposóbem na edycję treści ogłoszeń jest korzystanie ze strony <http://prose.io>. Po zalogowaniu się na niej używając loginu i hasła ze strony github.com i przyznaniu jej uprawnień do naszego konta, powinniśmy zobaczyć link o nazwie *Krakow2016* na liście z prawej strony - klikamy w niego, a następnie w projekt *tablica*. Jeżeli widzisz teraz listę ogłoszeń, dodaj bieżący link do zakładek - pozwoli Ci to na szybki powrót do tej strony w przyszłości.
+
+**Edycja:** Wybierz z listy dowoly plik aby go edytować. W trakcie pracy możesz zawsze zobaczyć podgląd klikając w okonkę oka (druga od góry) z prawej strony. Kategorie, limit zgłaszających się osób i inne metadane definiujemy klikając w ikonkę tabelki (trzecia od góry). Po skończonej pracy nie zapomnij zapisać zmian, klikając w ikonkę dyskietki (pierwsza od dołu). Zmiany będą widoczne na stronie po kilku sekundach.
+
+**Dodawanie:** Na liście wszystkich ogłoszeń kliknij w przycisk "Nowy plik" i postępuj tak jak przy edycji.
+
+### Tryb online (GitHub)
+
+W podobny sposób możemy dodawać nowe lub edytować istniejące ogłoszenia
+poprzez stronę internetową <https://github.com/Krakow2016/tablica/tree/gh-pages/_posts>.
 
 **Edycja:** Wybierz z listy dowolny plik z rozszerzeniem `.markdown`, a
 następnie kliknij ikonkę ołówka nad prawym górnym rogiem podgądu pliku. Teraz
@@ -29,7 +37,7 @@ możesz edytować treść pliku. Aby zapisać wykonaną pracę, kliknij przycisk
 `Commit changes`
 
 **Dodawanie:** Znajdź symbol `+` w górnej części strony, zaraz za ścieżką
-katalogów w której się znajdujemy (`jobs/_posts/`) i kliknij go. Teraz możesz
+katalogów w której się znajdujemy (`tablica/_posts/`) i kliknij go. Teraz możesz
 napisać treść ogłoszenia. Aby zapisać wykonaną pracę, kliknij przycisk `Commit
 new file`. Pamiętaj, że każde ogłoszenie musi zawierać na początku sekcję
 metadanych! Czytaj dalej żeby dowiedzieć się więcej.
@@ -43,8 +51,8 @@ Alternatywną metodą edycji treści strony jest ściągnięcie jej na lokalny k
 * skonfiguruj git-a klikając dalej,
 * krok importu możemy pominąć,
 * dodaj nowy projekt klikając w ikonkę plusa w lewym górnym rogu głównego ekranu programu, a następnie wybierz zakładkę "Clone",
-* jeżeli należymy do grupy Krakow2016, powinien pojawić się projekt o nazwie `jobs`,
-* zaznaczamy go i klikamy "Clone jobs", następnie wybieramy katalog do którego chcemy skopiować projekt.
+* jeżeli należymy do grupy Krakow2016, powinien pojawić się projekt o nazwie `tablica`,
+* zaznaczamy go i klikamy "Clone tablica", następnie wybieramy katalog do którego chcemy skopiować projekt.
 * Uff... nareszcie mamy nasze pliki :-) Najtrudniejsze już za nami! Możemy teraz wejść do wybranego wcześniej katalogu i dodawać lub edytować pliki w katalogu `_posts` w dowolnym edytorze tekstu.
 * Po skończonej pracy wracamy do programu Github. Powyżej listy z ostatnimi zmianami (History), powinien pojawić się pasek "Uncommited changes", a obok "Show" - klikamy w niego.
 * Po prawej stronie pojawi nam się podsumowanie zmian które chcemy dokonać. Wystarczy teraz, że opiszemy te zmiany jednym zdaniem w polu "Summary" i odblokuje się nam przycisk "Commit to gh-pages".
