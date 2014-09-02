@@ -2,9 +2,9 @@
 title: Bank Pracy - Wolontariusze ŚDM
 facebook: "facebook.com/swiatowydzienmlodziezy"
 description: "Jeżeli chcesz się zaangażować w organizację ŚDM - zgłoś chęć wykonania konkretnego zadania!"
-baseurl: ""
-url: "https://localhost:4000"
-backend: "http://local.host:3000"
+baseurl: "/tablica"
+url: "https://krakow2016.github.io"
+backend: "http://infinite-everglades-3721.herokuapp.com"
 twitter_username: "sdm_pl"
 github_username: "Krakow2016"
 
