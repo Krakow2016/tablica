@@ -13,7 +13,6 @@ markdown: kramdown
 permalink: "/:title.html"
 
 prose:
-  siteurl: 'http://krakow2016.github.io/jobs/'
   media: 'img'
   ignore:
     - _config.yml
@@ -44,6 +43,11 @@ prose:
               value: "pears"
             - name: "Mangos"
               value: "mangos"
+      - name: "team_count"
+        field:
+          element: "number"
+          label: "Liczba osób potrzebna do wykonania zadania"
+          value: 1
       - name: "archive"
         field:
           element: "checkbox"
