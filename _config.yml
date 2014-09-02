@@ -2,12 +2,50 @@
 title: Bank Pracy - Wolontariusze ŚDM
 facebook: "facebook.com/swiatowydzienmlodziezy"
 description: "Jeżeli chcesz się zaangażować w organizację ŚDM - zgłoś chęć wykonania konkretnego zadania!"
-baseurl: "/jobs"
-url: "https://krakow2016.github.io"
-backend: "http://infinite-everglades-3721.herokuapp.com"
+baseurl: ""
+url: "https://localhost:4000"
+backend: "http://local.host:3000"
 twitter_username: "sdm_pl"
 github_username: "Krakow2016"
 
 # Build settings
 markdown: kramdown
 permalink: "/:title.html"
+
+prose:
+  siteurl: 'http://krakow2016.github.io/jobs/'
+  media: 'img'
+  ignore:
+    - _config.yml
+    - /_layouts
+    - /_includes
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Tytuł"
+          value: ""
+      - name: "categories"
+        field:
+          element: "multiselect"
+          label: "Dodaj kategorię"
+          placeholder: "Wybierz kategorię"
+          options:
+            - name: "Apples"
+              value: "apples"
+            - name: "Bananas"
+              value: "bananas"
+            - name: "Pears"
+              value: "pears"
+            - name: "Mangos"
+              value: "mangos"
+      - name: "archive"
+        field:
+          element: "checkbox"
+          label: "Archiwum"
+          value: false
