@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Prose.io test
 team_count: 
   - "2"
