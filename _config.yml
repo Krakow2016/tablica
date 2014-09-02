@@ -13,11 +13,16 @@ markdown: kramdown
 permalink: "/:title.html"
 
 prose:
+  rooturl: '_posts'
   media: 'img'
   ignore:
     - _config.yml
     - /_layouts
     - /_includes
+    - README.markdown
+    - .gitignore
+    - feed.xml
+    - robots.txt
   metadata:
     _posts:
       - name: "layout"
@@ -34,6 +39,7 @@ prose:
           element: "multiselect"
           label: "Dodaj kategorię"
           placeholder: "Wybierz kategorię"
+          alterable: true
           options:
             - name: "Apples"
               value: "apples"
