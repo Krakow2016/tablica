@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: 03wrze Nowa praca
+title: " Nowa praca"
 team_count: "5"
 archive: false
 categories: 
