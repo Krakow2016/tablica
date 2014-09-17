@@ -45,14 +45,10 @@ prose:
           placeholder: "Wybierz kategorię"
           alterable: true
           options:
-            - name: "Apples"
-              value: "apples"
-            - name: "Bananas"
-              value: "bananas"
-            - name: "Pears"
-              value: "pears"
-            - name: "Mangos"
-              value: "mangos"
+            - name: "Wolontariat"
+              value: "wolontariat"
+            - name: "Grafika"
+              value: "grafika"
       - name: "team_count"
         field:
           element: "text"
