@@ -4,6 +4,7 @@ layout: post
 team_count: "1"
 archive: false
 title: kierowca
+description: To jest opis.
 categories: 
   - apples
 ---

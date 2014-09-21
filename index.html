@@ -45,7 +45,8 @@ javascript: js/index.js
             {{ post.title }}
           </h3>
         </a>
-        <small><span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span></small>
+        <p>{{ post.description }}</p>
+        <small class="time_added">Dodano: <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span></small>
       </div>
       </div>
       {% endif %}

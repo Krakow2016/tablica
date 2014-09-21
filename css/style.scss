@@ -222,3 +222,11 @@ footer .container {
 .category:not(.hidden) + .category .empty-alert {
   display: none
 }
+
+.time_added {
+  color: #ccc
+}
+
+.post-link + p {
+  margin-bottom: 0
+}

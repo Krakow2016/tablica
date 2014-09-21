@@ -38,6 +38,11 @@ prose:
           element: "text"
           label: "Tytuł"
           value: ""
+      - name: "description"
+        field:
+          element: "text"
+          label: "Krótki opis widoczny na liście wszystkich ogłoszeń"
+          value: ""
       - name: "categories"
         field:
           element: "multiselect"
