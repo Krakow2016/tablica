@@ -3,6 +3,9 @@ layout: default
 javascript: js/index.js
 ---
 
+{% capture intro %}{% include index.markdown %}{% endcapture %}
+{{ intro | markdownify }}
+
 {% assign categories = site.categories | sort %}
 <div class="content">
   Przeglądasz <span id="no_category">wszystkie</span> ogłoszenia <span id="from_category">z kategorii</span> <strong id="category_name"></strong>
