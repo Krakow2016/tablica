@@ -184,4 +184,13 @@ $('.apply-btn').click(function() {
     $('.me').click()
 })
 
+// Facebook comments
+var fb = function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&appId=1448147642126607&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs) }
+fb(document, 'script', 'facebook-jssdk')
+
 window.document.cookie = "callback="+window.location.toString()+";path=/"
