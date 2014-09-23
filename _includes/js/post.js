@@ -10,6 +10,7 @@ $.getJSON('https://krakow2016.cloudant.com/jobs/_design/applications/_view/all?s
     console.log('Wszystkich miejsc: ', $('#team_count').val())
 
     var available = $('#team_count').val() - applications.rows.length
+    $('#available_count').text(available)
     console.log('Wolnych miejsc: ', available)
 
     // Displaying submitted application
@@ -129,6 +130,9 @@ var Avatar = Backbone.View.extend({
                         user_id: that.user_id
                     }})}
                     that.$el.replaceWith(new Status.Apply(opts).render().el)
+
+                    var available = parseInt($('#available_count').text())
+                    $('#available_count').text(available+1)
                     $('#apply-alert').removeClass('hidden')
                     $('#applied-alert').addClass('hidden')
                 }
@@ -172,6 +176,9 @@ var Status = {
                     if(data.error) return
                     $el.replaceWith(new Avatar({model: that.model}).render().el)
                     that.model.trigger('me')
+
+                    var available = parseInt($('#available_count').text())
+                    $('#available_count').text(available-1)
                     $('#apply-alert').addClass('hidden')
                     $('#applied-alert').removeClass('hidden')
                 }
