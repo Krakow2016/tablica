@@ -1,8 +1,8 @@
 # WOLONTAIUSZE!!
 
 Jest to BANK PRACY dla wolontariuszy uczestniczących w przygotowaniu ŚDM Krakow 2016.
-Poniżej przedstawione są zadania do wykonania. 
 
+Poniżej przedstawione są zadania do wykonania. 
 Aby zgłosić się do wykonania zadania należy zalogować się używając konta facebook.
 Po zalogowaniu bedzie widoczny dokładnu opis zadania, informacja i ilości wolnych miejsc, formie kontaktu.
 
