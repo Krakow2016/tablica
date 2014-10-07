@@ -9,4 +9,4 @@ Jeśli decydujesz się na wykonanie zadania poprostu "kliknij" na swój obrazek 
 
 Jeżeli jesteś tutaj pierwszy raz i chcesz mieć dostęp do Banku Pracy to proszę wypelnij fromularz
 https://docs.google.com/forms/d/1fAwTgvJ_qWnGvgcmB8ZoUwJTwEnbAK7couKQIOIKRss/viewform
-.
+
