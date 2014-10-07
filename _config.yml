@@ -54,6 +54,10 @@ prose:
               value: "wolontariat"
             - name: "Grafika"
               value: "grafika"
+            - name: "Kanonicza"
+              value: "Kanonicza"
+            - name: "Praca zdalna"
+              value: "Zdalna"
       - name: "team_count"
         field:
           element: "text"
