@@ -234,3 +234,16 @@ footer .container {
 .meta {
   color: #777
 }
+
+#users td {
+  vertical-align: middle;
+}
+
+#users td:last-child , #users th:last-child {
+  text-align: center
+}
+
+#users img {
+  height: 50px;
+  width: 50px
+}
