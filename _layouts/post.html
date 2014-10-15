@@ -20,9 +20,16 @@ javascript: js/post.js
       <div class="login-alert alert alert-warning text-center hidden" role="alert">
         <a href="{{ site.backend }}/auth/facebook/" class="alert-link">Zaloguj się przez Facebook</a> żeby się zgłosić!
       </div>
+
       <div class="alert alert-danger text-center hidden error-alert" role="alert">
         <strong>Przepraszamy.</strong> Wystąpił błąd przy połączeniu z systemem logowania.
       </div>
+
+      <div id="not-verified-alert" class="alert alert-warning text-center hidden" role="alert">
+        <strong>Przepraszamy.</strong>
+        Tylko zweryfikowani użytkownicy mogą zgłaszać się do tego zadania. Aby zweryfikować swoje konto, <a href="https://docs.google.com/forms/d/1fAwTgvJ_qWnGvgcmB8ZoUwJTwEnbAK7couKQIOIKRss/viewform">wypełnij formularz</a>.
+      </div>
+
       <span class="glyphicon glyphicon-refresh loading-spinner"></span>
     </div>
   </header>

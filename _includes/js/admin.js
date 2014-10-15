@@ -5,7 +5,7 @@ $.getJSON(view, function(json) {
     _.each(json.rows, function(row){
         var user = row.value.doc
         var tr = $('<tr/>')
-        if(user.verified) { tr.addClass('success') }
+        if(user.verified) { tr.addClass('info') }
         tr.append($('<td><img src="http://graph.facebook.com/'+ user.profile.id +'/picture?width=50&height=50"></td>'))
         tr.append($('<td>'+ user.profile.displayName +'</td>'))
         tr.append($('<td>'+ row.value.score +'</td>'))
@@ -22,7 +22,7 @@ $.getJSON(view, function(json) {
                 success: function(json) {
                     if(json.ok) {
                         user._rev = json.rev
-                        tr[user.verified ? 'addClass' : 'removeClass']('success')
+                        tr[user.verified ? 'addClass' : 'removeClass']('info')
                     }
                 }
             })

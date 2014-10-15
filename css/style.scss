@@ -168,10 +168,11 @@ li.activeMe:hover .flipper, li.me:hover .flipper {
 
 #list:empty ~ .alert {
   margin: 20px 0;
-  line-height: 68px
+  line-height: 28px;
+  padding: 35px
 }
 
-#list:not(:empty) ~ .loading-spinner, .login-alert:not(.hidden) ~ .loading-spinner, .error-alert:not(.hidden) ~ .loading-spinner {
+#list:not(:empty) ~ .loading-spinner, .alert:not(.hidden) ~ .loading-spinner {
   display: none
 }
 
@@ -247,4 +248,8 @@ footer .container {
 #users img {
   height: 50px;
   width: 50px
+}
+
+#users tr.info {
+  font-weight: bold
 }

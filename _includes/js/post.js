@@ -50,15 +50,19 @@ $.getJSON('https://krakow2016.cloudant.com/jobs/_design/applications/_view/all?s
                 if(application) { // We already have applied
                     console.log('Already applied!')
                     application.trigger('me')
-                } else { // Show "apply for a job" button
-                    if(available > 0) {
-                        console.log('Apply!')
-                        var button = new Status.Apply({model: new Backbone.Model({doc: {
-                            username: user.result.profile.displayName,
-                            user_id: user.result._id
-                        }})})
-                        $('#list').append(button.render().el)
-                        $('#apply-alert').removeClass('hidden')
+                } else {
+                    if(available > 0) { // Show "apply for a job" button
+                        if(!user.result.verified) { // Not verified
+                            $('#not-verified-alert').removeClass('hidden')
+                        } else {
+                            console.log('Apply!')
+                            var button = new Status.Apply({model: new Backbone.Model({doc: {
+                                username: user.result.profile.displayName,
+                                user_id: user.result._id
+                            }})})
+                            $('#list').append(button.render().el)
+                            $('#apply-alert').removeClass('hidden')
+                        }
                     } else { // There is no more applications to apply for
                         console.log('Application closed')
                         $('#closed-alert').removeClass('hidden')
