@@ -7,6 +7,24 @@ javascript: js/admin.js
   Zarejestrowani wolontariusze
 </h2>
 
+<p class="text-center">
+  <div id="admin-alert" class="alert alert-danger" role="alert">
+    <strong>Momencik!</strong> Aby mieć uprawnienia do edycji tej strony musisz być zalogowany jako admin.
+  </div>
+  <div id="admin-info" class="alert alert-info hidden" role="alert">
+    <h4>Zalogowano!</h4>
+    Wytłuszczone wiersze ozaczają konta które znajdują się na białej liście i mogą zgłaszać się do wszystkich zadań publikowanych na stronie.
+    <ul>
+      <li>
+        Kliknięcie na użytkownika nieznajdującego się białej liście, dodaje go do niej.
+      </li>
+      <li>
+        Kliknięcie na użytkownika który już znajduje się na białej liście, usuwa go z niej.
+      </li>
+  </div>
+</p>
+
+<div class="container">
 <table id="users" class="table table-striped table-hover">
   <thead>
     <tr>
@@ -19,3 +37,26 @@ javascript: js/admin.js
   <tbody>
   </tbody>
 </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Nie tak szybko</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+        Aby administrować użytkownikami zaloguj się:
+        </p>
+        <form class="form-inline text-center" role="form">
+          <div class="form-group">
+            <input type="password" class="form-control" id="pass" placeholder="Hasło">
+          </div>
+          <button id="admin-submit" class="btn btn-primary">Zaloguj</button>
+        </form>
+      </div>
+  </div>
+</div>
