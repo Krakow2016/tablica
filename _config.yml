@@ -63,6 +63,11 @@ prose:
           element: "text"
           label: "Liczba osób potrzebna do wykonania zadania"
           value: "1"
+      - name: "deadline"
+        field:
+          element: "text"
+          label: "Czas do którego można się zgłaszać"
+          value: ""
       - name: "archive"
         field:
           element: "checkbox"

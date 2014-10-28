@@ -12,7 +12,7 @@ javascript: js/post.js
   <header class="post-header">
     <h1>
       {{ page.title }}
-      <small class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</small>
+      <small class="meta">Dodano: {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}{%if page.deadline %} • Termin wykonania: {{ page.deadline | date: "%b %-d, %Y" }}{% endif %}</small>
     </h1>
     <p>{{ page.description }} <small class="meta">Wolne miejsca: <span id="available_count">0</span> z {{ page.team_count }}.</small></p>
     <div class="container">

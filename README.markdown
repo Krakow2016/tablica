@@ -73,6 +73,8 @@ Dane jakie powinny znaleźć się w tej sekcji to:
 * `category` lub `categories` - kategoria lub kategorie oddzielone spacją,
 * `team_count` - liczba osób potrzebna do wykonania zadania,
 * `archive` (opcjonalnie) - jeżeli `true`, nie będzie wyświetlane na liście wszystkich ogłoszeń.
+* `description` (opcjonalnie) - krótkie podsumowanie treści widoczne na liście wszystkich ogłoszeń,
+* `deadline` (opcjonalnie) - czas do którego można się zgłaszać. Również: czynnik decydujący o pozycji na liście wszyskich ogłoszeń (ogłoszenia są sortowane rosnąco po parametrze `deadline`). Format: `YYYY-MM-DD`.
 
 Format danych w tej sekcji to: jedna para (klucz i wartość) w jednej linijce
 oddzielone dwukropkiem, np.: `layout: post`. W przypadku kategorii możliwe jest

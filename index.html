@@ -29,27 +29,29 @@ javascript: js/index.js
   <div class="category" data-category="#{{ category | first | uri_escape }}">
 
     {% assign category_name = category | first %}
-    {% for posts in category %}
+    {% assign deadlines = category | last | sort: 'deadline','last' | group_by: 'deadline' %}
+    {% for deadline in deadlines %}
+      {% assign posts = deadline.items | sort: 'date' %}
       {% for post in posts %}
-      {% if post.url and post.archive != true %}
-      <div class="row">
-        <div class="col-sm-4 text-right category-name">
-          {% if category_name %}
-            <em><small>{{ category_name }}</small></em>
-            {% assign category_name = false %}
-          {% endif %}
-      </div>
-      <div class="col-sm-8">
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-          <h3>
-            {{ post.title }}
-          </h3>
-        </a>
-        <p>{{ post.description }}</p>
-        <small class="time_added">Dodano: <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span></small>
-      </div>
-      </div>
-      {% endif %}
+        {% if post.archive != true %}
+        <div class="row">
+          <div class="col-sm-4 text-right category-name">
+            {% if category_name %}
+              <em><small>{{ category_name }}</small></em>
+              {% assign category_name = false %}
+            {% endif %}
+        </div>
+        <div class="col-sm-8">
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+            <h3>
+              {{ post.title }}
+            </h3>
+          </a>
+          <p>{{ post.description }}</p>
+          <small class="time_added">Dodano: <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span></small>
+        </div>
+        </div>
+        {% endif %}
       {% endfor %}
     {% endfor %}
 
