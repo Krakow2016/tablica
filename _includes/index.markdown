@@ -8,6 +8,5 @@ Po zalogowaniu bedzie widoczny dokładnu opis zadania, informacja i ilości woln
 
 Jeśli decydujesz się wykonać zadanie, poprostu "kliknij" na swój obrazek (avatar) z facebooka. 
 
-Jeżeli jesteś tutaj pierwszy raz i chcesz mieć dostęp do Banku Pracy to proszę wypelnij fromularz
-https://docs.google.com/forms/d/1fAwTgvJ_qWnGvgcmB8ZoUwJTwEnbAK7couKQIOIKRss/viewform
+Jeżeli jesteś tutaj pierwszy raz i chcesz mieć dostęp do Banku Pracy to proszę [wypelnij fromularz](https://docs.google.com/forms/d/1fAwTgvJ_qWnGvgcmB8ZoUwJTwEnbAK7couKQIOIKRss/viewform).
 
