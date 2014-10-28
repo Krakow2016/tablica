@@ -1,14 +1,16 @@
 ---
 published: true
 layout: post
-team_count: "1"
+team_count: "2"
 archive: false
 title: kierowca
 description: To jest opis.
 categories: 
-  - apples
+  - wolontariat
 ---
 
 ## A New Post
 
 Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+
+
