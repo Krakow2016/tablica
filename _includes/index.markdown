@@ -1,4 +1,4 @@
-# WOLONTAIUSZE!!
+# WOLONTARIUSZE!!
 
 Jest to BANK PRACY dla wolontariuszy uczestniczących w przygotowaniu ŚDM Krakow 2016.
 
