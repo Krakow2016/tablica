@@ -6,6 +6,7 @@ team_count: "4"
 archive: false
 categories: 
   - wolontariat
+  - Cokolwiek
 description: dzisaj po spotkaniu
 deadline: "2014-10-30"
 ---
