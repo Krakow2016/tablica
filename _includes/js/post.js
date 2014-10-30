@@ -97,7 +97,7 @@ var Avatar = Backbone.View.extend({
     render: function() {
         var match = this.user_id.match(':(.+)$')
           , fb_id = match ? match[1] : this.user_id
-        var src = 'http://graph.facebook.com/'+ fb_id +'/picture?width=100&height=100'
+        var src = 'https://graph.facebook.com/'+ fb_id +'/picture?width=100&height=100'
         if(!this.user_id) debugger
 
         this.$el.html( $('<div class="flipper" data-toggle="tooltip" title="'+ this.title() +'"><div class="front"><img src="'+ src +'" class="user_avatar"></div></div>') )
