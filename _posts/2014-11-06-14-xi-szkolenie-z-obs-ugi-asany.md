@@ -1,12 +1,12 @@
 ---
 published: true
 layout: post
-title: "21 XI - Szkolenie z obsługi Asany"
+title: "14 XI - Szkolenie z obsługi Asany"
 team_count: "5"
 archive: false
 categories: 
   - wolontariat
-deadline: "2014-11-20"
+deadline: "2014-11-13"
 description: Program do obsługi projektów
 ---
 
