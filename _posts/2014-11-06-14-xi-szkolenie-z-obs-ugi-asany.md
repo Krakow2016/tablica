@@ -20,4 +20,4 @@ Miejsce: Kanonicza 18
 Godzina: 17:00
 Czas trwania szkolenia: 30-60min
 
-Jelsi ktoś może, to prosże zabrać ze sobą laptop.
+Jeśli ktoś może, to prosże zabrać ze sobą laptop.
