@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: 21 XI Szkolenie Asana
+title: "21 XI - Szkolenie z obsługi Asanu"
 team_count: "5"
 archive: false
 categories: 
