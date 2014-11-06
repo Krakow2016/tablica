@@ -22,3 +22,7 @@ Godzina: 17:00,
 Czas trwania szkolenia: 30-60min,
 
 Jeśli ktoś może, to prosże zabrać ze sobą laptop.
+
+Kontakt: Jacek, 
+adres e-mail:  wolontariusze.krakow@gmail.com
+telefon: 518 309 704
