@@ -13,7 +13,7 @@ description: Program do obsługi projektów
 ## Szkolenie z obsługi programu Asana
 
 Asana to program do obsługi projektów.
-Jest to program używany przez Sekcję Wolontariatu. Chcemy nauczyć Was jego obsługi aby sprawniej działać. Dla wielu z Was program ten pomże być także pomocny w Waszej prywatnej działalności.
+Jest to program używany przez Sekcję Wolontariatu. Chcemy nauczyć Was jego obsługi aby sprawniej działać. Dla wielu z Was program ten być może będzie także pomocny w Waszej prywatnej działalności.
 Wiecej o opramie Asana znajdziecie [tutaj](https://asana.com/guide/learn)
 
 Miejsce: Kanonicza 18
