@@ -17,7 +17,8 @@ Jest to program używany przez Sekcję Wolontariatu. Chcemy nauczyć Was jego ob
 Wiecej o opramie Asana znajdziecie [tutaj](https://asana.com/guide/learn)
 
 Miejsce: Kanonicza 18,
-### 14 listopada, Godzina 17:00
+**Data:14 listopada,**
+**Godzina: 17:00,**
 Czas trwania szkolenia: 30-60min
 
 Jeśli ktoś może, to prosże zabrać ze sobą laptop.
