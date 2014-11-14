@@ -4,6 +4,8 @@ layout: post
 title: "temporary issue?"
 team_count: "1"
 archive: false
+categories: 
+  - test
 ---
 
 ## A New Post
