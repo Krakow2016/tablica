@@ -16,4 +16,4 @@ Rozpakowanie paczek z drukarni, złożenie folderów i spakowanie dla parafii.
 
 **Gdzie: ul.Kanonicza 18
 Data: sobota 22listopada godz. 12:00**
-Kontakt: Sulwester Gaik, telefon 691 972 905
+Kontakt: Sylwester Gaik, telefon 691 972 905
