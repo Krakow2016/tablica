@@ -12,7 +12,8 @@ deadline: "2014-12-16"
 
 ## Przenoszenie danych z kartek do komputerowej bazdy danych
 
-Zadanie polega na wpisywaniu części danych z formularzy zgłoszeń i CV do bazy Danych Wolontariuszy za pomocą formularza internetowego. Praca jest przewidziana na kilka dni (ok 40godzin roboczych). 
+Zadanie polega na wpisywaniu części danych z formularzy zgłoszeń i CV do bazy Danych Wolontariuszy za pomocą formularza internetowego. 
+Praca jest przewidziana na kilka dni (ok 40godzin roboczych). 
 Zapraszamy codziennie w godzinach pracy Biura ŚDM.
 Zostały już przygotowane stanowiska komputetowe.
 
