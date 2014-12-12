@@ -17,7 +17,10 @@ Zapraszamy codziennie w godzinach pracy Biura ŚDM.
 Zostały już przygotowane stanowiska komputetowe.
 
 
-**Miejsce pracy: Biuro ŚDM, ul. Kanonicza 18, I piętro
-Data: poniedziałek 15grudnia 2014 w godzinach 9-17**
+**Miejsce pracy: Biuro ŚDM, ul. Kanonicza 18, I piętro**
+
+**Data: poniedziałek 15grudnia 2014 w godzinach 9-17**
+
 **Czas pracy: tyle ile chcesz poświęcić- od minuty, jednak nie więcej niż 2godziny.** Zbliżają się Święta Bożego Narodzenia. Warto spędzić czas z Bliskimi.
-**Kontakt: Jacek Faber e-mail: j.faber@krakow2016.com   tel. 518 309 704**
+
+**Kontakt: Jacek Faber, e-mail: j.faber@krakow2016.com   tel. 518 309 704**
