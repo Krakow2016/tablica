@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Pon 15gru Wprowadzanie danych do Bazy Danych
+title: Pon 15grudnia Wprowadzanie danych do Bazy Danych
 team_count: "4"
 archive: false
 description: spisywanie zgłoszeń i CV
