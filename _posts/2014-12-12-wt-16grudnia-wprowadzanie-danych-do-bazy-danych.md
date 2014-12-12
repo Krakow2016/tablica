@@ -6,7 +6,7 @@ team_count: "4"
 archive: false
 categories: 
   - wolontariat
-description: spisywanie zfłoszeń i CV
+description: spisywanie zgłoszeń i CV
 deadline: "2014-12-16"
 ---
 
