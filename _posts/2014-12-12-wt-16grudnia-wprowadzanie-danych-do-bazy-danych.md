@@ -18,6 +18,7 @@ Zostały już przygotowane stanowiska komputetowe.
 
 
 **Miejsce pracy: Biuro ŚDM, ul. Kanonicza 18, I piętro
+
 Data: wtorek 16grudnia 2014 w godzinach 13-17**
 
 **Czas pracy: tyle ile chcesz poświęcić- od minuty, jednak nie więcej niż 2godziny.** Zbliżają się Święta Bożego Narodzenia. Warto spędzić czas z Bliskimi.
