@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Czw 18gru Wprowadzanie danych do Bazy Danych
+title: Czw 18grudnia Wprowadzanie danych do Bazy Danych
 team_count: "4"
 archive: false
 description: spisywanie zgłoszeń i CV
