@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Śr 17gru Wprowadzanie danych do Bazy
+title: Śr 17grudnia Wprowadzanie danych do Bazy
 team_count: "4"
 archive: false
 description: spisywanie zgłoszeń i CV
