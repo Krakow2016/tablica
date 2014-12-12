@@ -4,7 +4,7 @@ Oto BANK PRACY dla wolontariuszy uczestniczących w przygotowaniu ŚDM Krakow 20
 
 Poniżej przedstawione są zadania do wykonania. 
 Aby zgłosić się do wykonania zadania należy zalogować się używając konta facebook.
-Po zalogowaniu bedzie widoczny dokładny opis zadania, informacja o ilości wolnych miejsc, datcie i miejscu realizacji pracy oraz formie kontaktu.
+Po zalogowaniu bedzie widoczny dokładny opis zadania, informacja o ilości wolnych miejsc, dacie i miejscu realizacji pracy oraz formie kontaktu.
 
 Jeśli decydujesz się wykonać zadanie, poprostu "kliknij" na swój obrazek (avatar) z facebooka. 
 
