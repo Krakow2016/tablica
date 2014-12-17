@@ -15,5 +15,5 @@ Jeżeli jesteś tutaj pierwszy raz i chcesz mieć dostęp do Banku Pracy to pros
 </p>
 
 Po wypełnieniu formularza, proszę  zgłoś się do zadania.
-Twoje zgłoszenie będzie rozpatrzone w ciągu 24godzin. Po pozytywnej weryfikacji, już bez ograniczeń możesz wybierać pracę
+Twoje zgłoszenie będzie rozpatrzone w ciągu 24godzin. Po pozytywnej weryfikacji, już bez ograniczeń możesz wybierać pracę.
 
