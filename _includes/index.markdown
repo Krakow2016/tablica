@@ -8,9 +8,10 @@ Po zalogowaniu bedzie widoczny dokładny opis zadania, informacja o ilości woln
 
 Jeśli decydujesz się wykonać zadanie, poprostu "kliknij" na swój obrazek (avatar) z facebooka. 
 
-Jeżeli jesteś tutaj pierwszy raz i chcesz mieć dostęp do Banku Pracy to proszę
+Jeżeli jesteś tutaj pierwszy raz i chcesz mieć dostęp do Banku Pracy to prosimy:
+
 Zaloguj się używając konta facebook, a następnie
-role="button">wypełnij formularz!</a>
+
 
 <p class="text-center">
   <a class="btn btn-primary btn-lg" href="https://docs.google.com/forms/d/1fAwTgvJ_qWnGvgcmB8ZoUwJTwEnbAK7couKQIOIKRss/viewform" role="button">wypełnij formularz!</a>
