@@ -9,7 +9,7 @@ categories:
   - wolontariat
 ---
 
-## Przenoszenie danych z kartek do komputerowej bazdy danych
+## Przenoszenie danych z kartek do komputerowej bazy danych
 
 Zadanie polega na wpisywaniu części danych z formularzy zgłoszeń i CV do bazy Danych Wolontariuszy za pomocą formularza internetowego. 
 Praca jest przewidziana na kilka dni (ok 40godzin roboczych). 
