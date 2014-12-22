@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Czw 18grudnia Wprowadzanie danych do Bazy Danych
+title: " Codziennie: Wprowadzanie danych do Bazy Danych"
 team_count: "4"
 archive: false
 description: spisywanie zgłoszeń i CV
@@ -19,7 +19,7 @@ Zostały już przygotowane stanowiska komputerowe.
 
 **Miejsce pracy: Biuro ŚDM, ul. Kanonicza 18, I piętro**
 
-**Data: czwartek 18grudnia 2014 w godzinach 10-17**
+**Data: każdy dzień roboczy 10-17**
 
 **Czas pracy: tyle ile chcesz poświęcić- od minuty, jednak nie więcej niż 2godziny.** Zbliżają się Święta Bożego Narodzenia. Warto spędzić czas z Bliskimi.
 
