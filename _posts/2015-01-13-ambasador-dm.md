@@ -18,4 +18,4 @@ Od chętnych wymaga się gotowości do wystąpień publicznych. Uczestnictwo w p
 
 Zgłaszajcie się tutaj i piszcie na adres wolontariat@krakow2016.com (w tytule zaznaczcie: Ambasador ŚDM). 
 
-Na przełomie stycznia i lutego odbęda się pierwsze szkolenia.
+Na przełomie stycznia i lutego tego roku odbęda się pierwsze szkolenia.
