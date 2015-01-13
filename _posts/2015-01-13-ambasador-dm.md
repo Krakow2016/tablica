@@ -16,6 +16,6 @@ Prezentacje mają ukazać parafianom czym jest ŚDM, co będzie działo się w l
 
 Od chętnych wymaga się gotowości do wystąpień publicznych. Uczestnictwo w poprzednich ŚDM nie jest warunkiem koniecznym.
 
-Zgłasajcie się tutaj i piszcie na mail wolontariat@krakow2016.com (w tytule: Ambasador ŚDM). 
+Zgłaszajcie się tutaj i piszcie na adres wolontariat@krakow2016.com (w tytule zaznaczcie: Ambasador ŚDM). 
 
 Na przełomie stycznia i lutego odbęda się pierwsze szkolenia.
