@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: "16 stycznia- Msza Święta- św. Krzyż"
+title: "Msza Święta- św. Krzyż"
 team_count: "2"
 archive: false
 categories: 
@@ -22,4 +22,4 @@ Zadanie polega na:
 
 Osoby zainteresowane prosimy o kontakt na adres wolontariat@krakow2016.com
 
-**Najbliższa msza już w piatek 16 stycznia o 18:00**
+**Najbliższa msza już w poniedziałek 16 stycznia o 18:00**
