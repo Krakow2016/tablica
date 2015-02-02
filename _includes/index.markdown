@@ -17,5 +17,5 @@ Zaloguj się używając konta facebook, a następnie
   <a class="btn btn-primary btn-lg" href="https://docs.google.com/forms/d/1fAwTgvJ_qWnGvgcmB8ZoUwJTwEnbAK7couKQIOIKRss/viewform" role="button">wypełnij formularz!</a>
 </p>
 
-Po wypełnieniu formularza Twoje zgłoszenie będzie rozpatrzone w ciągu 24godzin. Po pozytywnej weryfikacji możesz wybierać pracę.
+Po wypełnieniu formularza Twoje zgłoszenie będzie rozpatrzone w ciągu 24godzin. NIE będzie wysyłana żadna wiadomość, po prostu zgłoś się do zadania.
 
