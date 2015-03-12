@@ -22,4 +22,4 @@ Zadanie polega na:
 
 Osoby zainteresowane prosimy o kontakt na adres wolontariat@krakow2016.com
 
-**Najbliższa msza już w poniedziałek 16 lutego o 18:00**
+**Najbliższa msza już w poniedziałek 16 marca o 18:00**
