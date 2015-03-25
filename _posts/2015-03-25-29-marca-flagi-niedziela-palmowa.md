@@ -17,4 +17,4 @@ Już w nabliższą niedzielę - Niedzielę Palmową świętujemy XXX Świtowy Dz
 Potrzebne sa osoby do niesienia i powiewania flag w czasie procesji od dzwonnicy do gornego kościoła w Sanktuarium Jana Pawła II.
 Zbiórka o 11:50 przy dzwonicy.
 
-W razie pytan lub watpliwosci, prosze uprzejmie o kontakt j.faber@krakow2016.com
+W razie pytań lub wątpliwosci, proszą uprzejmie o kontakt j.faber@krakow2016.com
